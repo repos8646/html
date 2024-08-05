@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2.가시속성</title>
+    <!--
+        날짜 : 2024/07/24
+        이름 : 김보경
+        내용 : 가시속성 실습하기
+    -->
+    <style>
+        div > span { background-color: orange; }
+        div > div { background-color: green; }
+
+        .box1 > span:nth-child(1){ display: none; } /*공간까지 사라짐*/
+        .box1 > span:nth-child(2){ visibility: hidden; } /*공간 남아있음*/
+
+        /* display:block */
+        .box2 > span:nth-child(2){
+            display: block;
+            width: 100px;
+            height: 100px;
+        }
+
+        /* display:inline*/
+        .box3 > div {
+            display: inline; /*크기부여 안됨*/
+        }
+
+        /* display:inline-block */
+        .box4 > div {
+            display: inline-block;
+            width: 100px;
+            height: 100px; /*크기를 줄 주 있음*/
+        }
+
+        .box5 {
+            display: inline-block;
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+            box-sizing: border-box;
+        }
+
+        .box5 > div {
+            width: 100px;
+            height: 300px;
+            background-color: orange;
+            border: 1px solid black;
+            box-sizing: border-box;
+        }
+
+        .box5-1 { overflow: visible; }
+        .box5-2 { overflow: scroll; }
+        .box5-3 { overflow: hidden; }
+
+    </style>
+
+</head>
+<body>
+    <h2>2. 가시속성</h2>
+
+    <h4>display:none</h4>
+    <div class="box1">
+        <span>SPAN1</span>
+        <span>SPAN2</span>
+        <span>SPAN3</span>
+    </div>
+    <h4>display:block</block>
+        <div class="box2">
+            <span>SPAN1</span>
+            <span>SPAN2</span>
+            <span>SPAN3</span>
+        </div>
+    <h4>display:inline</h4>
+    <div class="box3">
+        <span>SPAN1</span>
+        <div>DIV2</div>
+        <span>SPAN3</span>
+    </div>
+    <h4>display:inline-block</h4>
+    <div class="box4">
+        <span>SPAN1</span>
+        <div>DIV2</div>
+        <span>SPAN3</span>
+    </div>
+    <h4>overflow</h4>
+    <div class="box5 box5-1">
+        <div></div>
+    </div>
+    <div class="box5 box5-2">
+        <div></div>
+    </div>
+    <div class="box5 box5-3">
+        <div></div>
+    </div>
+
+</body>
+</html>
