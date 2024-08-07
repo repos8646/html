@@ -17,7 +17,7 @@
 
         #wrapper {
             width : 100%;
-            height : 100%;
+            height : 743px;
             margin : 0 auto;
         }
 
@@ -27,27 +27,20 @@
             width: 980px;
             height: 60px;
             left: 470px;
-            right: 470px;
             top: 0px;
-
+            overflow: hidden;
         }
 
-        #header {
+        header > a {
             position: absolute;
             width: 170px;
             height: 32px;
             left: 12px;
             top: 12px;
-            background: url(admin_logo.jpg);
-            background-repeat: no-repeat;
-            
+            background: url(../img/admin/admin_logo.jpg) no-repeat;
         }
 
-        header > div {
-            position: relative;
-        }
-
-        header > div > span {
+        header > span {
             width: 150px;
             height: 14px;
             position: absolute;
@@ -60,7 +53,7 @@
         main{
             position: absolute;
             width: 980px;
-            height: auto;
+            height: 644px;
             left: 470px;
             right: 470px;
             top: 60px;
@@ -162,11 +155,7 @@
             top: 0px;
         }
 
-        aside > nav {
-            
-        }
-
-        .heading3 {
+        aside > p {
             width: 156px;
             height: 30px;
             top: 10px;
@@ -176,10 +165,8 @@
             background: #E5E5E5;
         }
 
-        .heading3 > p {
-            display: flex;
-            justify-items: center;
-            align-items: center;
+        .heading3{
+            display: flex;            
             font-size: 14px;
             line-height: 17px;
             padding: 7px 0px 0px 21px;
@@ -190,7 +177,6 @@
             height: 15px;
             top: 7px;
             left: 21px;
-
         }
 
         ul {
@@ -253,9 +239,8 @@
 <body>
     <div id = "wrapper">
         <header>
-            <div id="header">
-                <span>HOME | 로그아웃 | 고객센터</span>
-            </div>
+            <a href="#"></a>
+            <span>HOME | 로그아웃 | 고객센터</span>
         </header>
 
         <main>
@@ -349,26 +334,22 @@
                 </article>
             </section>
             <aside>
-                <h2 class="heading3">
-                    <p>주요기능</p>
-                </h2>  
-                <nav class="aside-list">
-                    <ul>
-                        <li>
-                            <p>상품관리</p>
-                            <a href="#">┗ 상품목록</a><br>
-                            <a href="#">┗ 상품등록</a>
-                        </li>
-                        <li>
-                            <p>주문관리</p>
-                            <a href="#">┗ 주문목록</a>
-                        </li>
-                        <li>
-                            <p>회원관리</p>
-                            <a href="#">┗ 회원목록</a>
-                        </li>
-                    </ul>
-                </nav>
+                <p class="heading3">주요기능</p>
+                <ul class="aside-list">
+                    <li>
+                        <p>상품관리</p>
+                        <a href="#" class="orderedList">┗ 상품목록</a><br>
+                        <a href="#" class="orderedList">┗ 상품등록</a>
+                    </li>
+                    <li>
+                        <p>주문관리</p>
+                        <a href="#">┗ 주문목록</a>
+                    </li>
+                    <li>
+                        <p>회원관리</p>
+                        <a href="#">┗ 회원목록</a>
+                    </li>
+                </ul>
             </aside>
         </main>
 
