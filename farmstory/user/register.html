@@ -46,7 +46,9 @@
             position: absolute;
             top: 13px;
             left: 820px;
-            font-size: 11px; /*글씨체 바꾸면 변경해야 함*/
+            font-size: 11px; /*글씨체 바꾸면 12로 변경해야 함*/
+            /*color: white;*/
+            line-height: 14px;
         }
 
         /************************ Main ************************/
@@ -55,15 +57,111 @@
             width: 980px;
             height: 644px;
             left: 470px;
-            right: 470px;
             top: 60px;
+        }
+
+        /************************ Aside ************************/
+        aside{
+            position: absolute;
+            width: 176px;
+            height: 400px;
+            left: 0px;
+            top: 0px;
+        }
+
+        aside > div {
+            width: 156px;
+            height: 30px;
+            top: 10px;
+            left: 10px;
+            border: 1px solid #CCCCCC;
+            border-radius: 20px;
+            background: #E5E5E5;
+        }
+
+        aside > div > p {          
+            font-size: 14px;
+            line-height: 17px;
+            padding: 7px 0px 0px 21px;
+        }
+
+        aside > h2 {
+            width: 56px;
+            height: 15px;
+            top: 7px;
+            left: 21px;
+        }
+
+        .aside-list {
+            width: 156px;
+            height: 234px;
+            position: absolute;
+            top: 40px;
+            left: 10px;
+        }
+        
+        li > a {
+            width: 124px;
+            height: 22px;
+            position: absolute;
+            top: 28;
+        }
+
+        li:nth-child(1) {
+            width: 124px;
+            height: 72px;
+            position: absolute;
+            top: 26px;
+            left: 16px;
+        }
+        li:nth-child(2) {
+            width: 124px;
+            height: 72px;
+            position: absolute;
+            top: 108px;
+            left: 16px;
+        }
+        li:nth-child(3) {
+            width: 124px;
+            height: 72px;
+            position: absolute;
+            top: 168px;
+            left: 16px;
+        }
+
+        .tit {
+            width: 48px;
+            height: 14px;
+            position: absolute;
+            top: 4px;
+        }
+
+        .contents {
+            width: 124px;
+            height: 22px;
+            position: absolute;
+            top: 28px;
+        }
+
+        .contents-1 {
+            width: 124px;
+            height: 22px;
+            position: absolute;
+            top: 28px;
+        }
+
+        .contents-2 {
+            width: 124px;
+            height: 22px;
+            position: absolute;
+            top: 50px;
         }
 
         /* Section */
         section{
-            position: absolute;
             width: 804px;
             height: 644px;
+            position: absolute;
             left: 176px;
         }
 
@@ -146,74 +244,6 @@
             display: none;
         }*/
 
-        /************************ Aside ************************/
-        aside{
-            position: absolute;
-            width: 176px;
-            height: 400px;
-            left: 0px;
-            top: 0px;
-        }
-
-        aside > p {
-            width: 156px;
-            height: 30px;
-            top: 10px;
-            left: 10px;
-            border: 1px solid #CCCCCC;
-            border-radius: 20px;
-            background: #E5E5E5;
-        }
-
-        .heading3{
-            display: flex;            
-            font-size: 14px;
-            line-height: 17px;
-            padding: 7px 0px 0px 21px;
-        }
-
-        aside > h2 {
-            width: 56px;
-            height: 15px;
-            top: 7px;
-            left: 21px;
-        }
-
-        ul {
-            width: 156px;
-            height: 234px;
-            top: 40px;
-            left: 10px;
-            position: relative;
-        }
-        
-        li {
-            
-        }
-
-        li:nth-child(1) {
-            width: 124px;
-            height: 72px;
-            position: absolute;
-            top: 26px;
-            left: 16px;
-        }
-        li:nth-child(2) {
-            width: 124px;
-            height: 72px;
-            position: absolute;
-            top: 108px;
-            left: 16px;
-        }
-        li:nth-child(3) {
-            width: 124px;
-            height: 72px;
-            position: absolute;
-            top: 168px;
-            left: 16px;
-        }
-
-
         /************************ Footer ************************/
         footer{
             position: absolute;
@@ -244,6 +274,26 @@
         </header>
 
         <main>
+            <aside>
+                <div>
+                    <p>주요기능</p>
+                </div>
+                <ul class="aside-list">
+                    <li>
+                        <p class="tit">상품관리</p>
+                        <a href="#" class="contents-1">┗ 상품목록</a><br>
+                        <a href="#" class="contents-2">┗ 상품등록</a>
+                    </li>
+                    <li>
+                        <p class="tit">주문관리</p>
+                        <a href="#" class="contents">┗ 주문목록</a>
+                    </li>
+                    <li>
+                        <p class="tit">회원관리</p>
+                        <a href="#" class="contents">┗ 회원목록</a>
+                    </li>
+                </ul>
+            </aside>
             <section>
                 <article>
                     <nav>
@@ -333,24 +383,6 @@
                     
                 </article>
             </section>
-            <aside>
-                <p class="heading3">주요기능</p>
-                <ul class="aside-list">
-                    <li>
-                        <p>상품관리</p>
-                        <a href="#" class="orderedList">┗ 상품목록</a><br>
-                        <a href="#" class="orderedList">┗ 상품등록</a>
-                    </li>
-                    <li>
-                        <p>주문관리</p>
-                        <a href="#">┗ 주문목록</a>
-                    </li>
-                    <li>
-                        <p>회원관리</p>
-                        <a href="#">┗ 회원목록</a>
-                    </li>
-                </ul>
-            </aside>
         </main>
 
         <footer>
