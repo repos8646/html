@@ -28,7 +28,7 @@
             height: 60px;
             left: 470px;
             top: 0px;
-            overflow: hidden;
+            background: url(../img/admin/admin_bg.jpg);
         }
 
         header > a {
@@ -41,13 +41,13 @@
         }
 
         header > span {
-            width: 150px;
+            width: 149px;
             height: 14px;
             position: absolute;
             top: 13px;
-            left: 820px;
-            font-size: 11px; /*글씨체 바꾸면 12로 변경해야 함*/
-            /*color: white;*/
+            left: 819px;
+            font-size: 11px; /*원래는 12로 변경해야 함*/
+            color: white;
             line-height: 14px;
         }
 
@@ -69,9 +69,10 @@
             top: 0px;
         }
 
-        aside > div {
+        .main_function {
             width: 156px;
             height: 30px;
+            position: absolute;
             top: 10px;
             left: 10px;
             border: 1px solid #CCCCCC;
@@ -85,11 +86,14 @@
             padding: 7px 0px 0px 21px;
         }
 
-        aside > h2 {
+        aside > h3 > p {
             width: 56px;
             height: 15px;
+            position: absolute;
             top: 7px;
             left: 21px;
+            font-size: 14px;
+            line-height: 17px;
         }
 
         .aside-list {
@@ -157,7 +161,7 @@
             top: 50px;
         }
 
-        /* Section */
+        /************************ section ************************/
         section{
             width: 804px;
             height: 644px;
@@ -165,15 +169,30 @@
             left: 176px;
         }
 
+        section > article {
+            width: 784px;
+            height: 577px;
+            position: relative;
+        }
 
-        .heading2 {
+        .heading3 {
             width: 68px;
             height: 19px;
-            margin: 10px;
+            position: absolute;
+            top: 12px;
+            left: 10px;
             font-size: 17px;
-            font-weight: 21px;
+            line-height: 21px;
             font-weight: bold;
             color: #3f3f3f;
+        }
+
+        article > form {
+            width: 784px;
+            height: 577px;
+            position: absolute;
+            top: 45px;
+            left: 10px;
         }
 
         td {
@@ -195,8 +214,8 @@
         }
 
         .etc {
-            height: 2em;
-            line-height: 2em;
+            width: 157px;
+            height: 32px;
         }
 
         .reset {
@@ -220,7 +239,7 @@
         }
 
         .file {
-            display: none;
+            
         }
 
         .btn-file {
@@ -239,10 +258,6 @@
         .last-btn {
             text-align: center;
         }
-
-        /*.empty {
-            display: none;
-        }*/
 
         /************************ Footer ************************/
         footer{
@@ -275,9 +290,7 @@
 
         <main>
             <aside>
-                <div>
-                    <p>주요기능</p>
-                </div>
+                <h3 class="main_function"><p>주요기능</p></h3>
                 <ul class="aside-list">
                     <li>
                         <p class="tit">상품관리</p>
@@ -297,7 +310,7 @@
             <section>
                 <article>
                     <nav>
-                        <h2 class="heading2">상품등록</h2>
+                        <h3 class="heading3">상품등록</h3>
                     </nav>
                     <form action="">
                         <table>
@@ -346,30 +359,14 @@
                             <tr>
                                 <td>상품이미지</td>
                                 <td>
-                                    <p>상품목록 이미지(약 120 x 120)</p>
-                                    <br>
-                                    <label for="file" id="file">
-                                        <div class="btn-file">Choose File</div>
-                                        No file chosen
-                                    </label>
-                                    <input type="file" multiple class="file">
-                                    <br>
-                                    <p>기본정보 이미지(약 240 x 240)</p>
-                                    <br>
-                                    <label for="file" id="file">
-                                        <div class="btn-file">Choose File</div>
-                                        No file chosen
-                                    </label>
-                                    <input type="file" multiple class="file">
-                                    <br>
-                                    <p>상품설명 이미지(약 750 x Auto)</p>
-                                    <br>
-                                    <label for="file" id="file">
-                                        <div class="btn-file">Choose File</div>
-                                        No file chosen
-                                    </label>
+                                    <p>상품목록 이미지(약 120 x 120)</p><br>
+                                    <input type="file" multiple class="file"><br>
+                                    <p>기본정보 이미지(약 240 x 240)</p><br>
+                                    <input type="file" multiple class="file"><br>
+                                    <p>상품설명 이미지(약 750 x Auto)</p><br>
                                     <input type="file" multiple class="file">
                                 </td>
+                            </tr>
                             <tr>
                                 <td>기타</td>
                                 <td><input type="text" class="etc"></td><!--사이즈를 크게-->
