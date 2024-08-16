@@ -192,6 +192,10 @@
             padding: 10px;
         }
 
+        .tdAll {
+            width: 80px;
+        }
+
         table {
             width: 784px;
             height: 534px;
@@ -259,6 +263,9 @@
             background-color: white;
             border: 1px solid #cccccc;
             border-radius: 20px;
+            display: flex;
+            align-items:center;
+            justify-content:center;
         }
 
         .submit{
@@ -270,6 +277,9 @@
             background-color: #efefef;
             border: 1px solid #cccccc;
             border-radius: 20px;
+            display: flex;
+            align-items:center;
+            justify-content:center;
         }
 
         form > a {
@@ -334,11 +344,11 @@
                         <table>
                             <tbody>
                                 <tr>
-                                    <td class="td-1">상품명</td>
+                                    <td class="td-1 tdAll">상품명</td>
                                     <td class="td-1"><input type="text"></td>
                                 </tr>
                                 <tr>
-                                    <td>종류</td>
+                                    <td class="tdAll">종류</td>
                                     <td>
                                         <select name="" id="option">
                                             <option value="종류">종류</option>
@@ -346,15 +356,15 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>가격</td>
+                                    <td class="tdAll">가격</td>
                                     <td><input type="text"></td>
                                 </tr>
                                 <tr>
-                                    <td>포인트</td>
+                                    <td class="tdAll">포인트</td>
                                     <td><input type="text" placeholder="100">포인트는 가격의 1%</td>
                                 </tr>
                                 <tr>
-                                    <td>할인</td>
+                                    <td class="tdAll">할인</td>
                                     <td>
                                         <select name="" id="option">
                                             <option value="5%">5%</option>
@@ -363,7 +373,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>배송비</td>
+                                    <td class="tdAll">배송비</td>
                                     <td>
                                         <input type="radio">2,000원&nbsp;&nbsp;&nbsp;
                                         <input type="radio">3,000원&nbsp;&nbsp;&nbsp;
@@ -372,11 +382,11 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>재고</td>
+                                    <td class="tdAll">재고</td>
                                     <td><input type="text"></td>
                                 </tr>
                                 <tr>
-                                    <td>상품이미지</td>
+                                    <td class="tdAll">상품이미지</td>
                                     <td class="td-file">
                                         <p>상품목록 이미지(약 120 x 120)</p>
                                         <label for="input-text">
@@ -399,7 +409,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>기타</td>
+                                    <td class="tdAll">기타</td>
                                     <td><input type="text" class="etc"></td><!--사이즈를 크게-->
                                 </tr>
                             </tbody>
